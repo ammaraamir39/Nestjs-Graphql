@@ -1,0 +1,15 @@
+type Contact {
+  id: ID
+  createdAt: String
+  name: String
+  contact: String
+  position:String
+}
+
+input ContactInput{
+    id:ID
+    name:String
+    contact: String
+    position:String
+}
+

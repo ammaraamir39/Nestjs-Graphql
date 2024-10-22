@@ -1,0 +1,66 @@
+enum PriceType{
+    G
+    N
+    B
+    F
+    I
+}
+
+type Quotation{
+    id:ID
+    createdAt:String
+    customer : Customer
+    req : String 
+    contactName:String
+    contactNumber:String
+    leadTime:String
+    faxNumber:String
+    quotedBy:User
+    shipVia:String
+    quotationStock:[QuotationStock]
+    imageFile:[ImageFile]
+    grandTotal:Float
+    imageUrl:[ImageFile]
+}
+
+
+type Query{
+    getQuotationById(id:ID!) :Quotation
+    getAllQuotations : [Quotation]
+
+}
+
+type Mutation {
+    addQuotation(
+        customerId:ID!,
+        req:String,
+        contactName:String,
+        contactNumber:String,
+        leadTime:String,
+        faxNumber:String,
+        shipVia:String,
+        quotationStock:[QuotationStockInput]!,
+        grandTotal:Float!
+        quotedBy:ID
+        ) :Boolean
+
+
+    updateQuotation(
+        id:ID!
+        customer:ID!
+        req:String
+        contactName:String
+        contactNumber:String
+        leadTime:String
+        faxNumber:String
+        shipVia : String
+        quotationStock:[QuotationStockInput]!
+        grandTotal : Float !
+        quotedBy : ID
+    ) : Quotation
+
+    deleteQuotation(id:ID!) : Boolean
+    sendQuotationEmail(email:String!, contact_name :String! , sales_rep:String!, file:String!, quotation_number:String): Boolean
+}
+
+

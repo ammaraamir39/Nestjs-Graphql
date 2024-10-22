@@ -1,0 +1,9 @@
+type Grades {
+    name : String
+    createdAt : String
+    id:ID
+}
+
+input GradesInput{
+    name:String
+}

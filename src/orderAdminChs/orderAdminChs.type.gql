@@ -1,0 +1,55 @@
+enum TypeAorC {
+    A
+    C
+}
+enum TypeLorB{
+    L
+    B
+}
+
+type OrderAdminChs{
+    id : ID 
+    typeAorC : TypeAorC 
+    typeLorB : TypeLorB
+    quantity : Float
+    grade : String
+    startSize : Float
+    finishSizeHigh : Float
+    finishSizeLow : Float
+    rms : Float
+    feet : Float 
+    inches : Float 
+    inventoryNo : String
+    heatNo : String 
+    dueDate : String
+    um : String  
+    unitPrice : Float 
+    total : Float 
+    partNumber : String
+    packaging : String
+    notes: String
+    inventory:Inventory
+}
+
+input OrderAdminChsInput{
+    typeAorC : TypeAorC 
+    typeLorB : TypeLorB
+    quantity : Float!
+    grade : String
+    startSize : Float!
+    finishSizeHigh : Float!
+    finishSizeLow : Float!
+    rms : Float
+    feet : Float
+    inches : Float 
+    inventoryNo : String
+    heatNo : String 
+    dueDate : String 
+    um : String  
+    unitPrice : Float!
+    partNumber : String
+    total : Float
+    packaging : String
+    notes: String
+    inventory:ID
+}

@@ -1,0 +1,28 @@
+type ImageFile{
+    id:ID
+    fileName : String
+    description : String
+    url : String
+    bucketFileName : String
+}
+
+input ImageFileInput { 
+    fileName : String
+    description : String
+    url : String
+}
+
+type Mutation {
+
+    addImageFile(
+        file:String!
+        bucketFileName:String!
+        fileName : String
+        description : String
+        quotation:ID
+        order:ID
+    ) : Boolean
+}
+type Query{
+    downloadFile(bucketFileName:String!):String
+}

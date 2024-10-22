@@ -1,0 +1,27 @@
+type Customer {
+    id:ID
+    createdAt:String
+    companyName:String
+    primaryAddress :String
+    primaryContact :String
+    fax:String
+    termsOfPayment : String
+    shipVia:String
+    notes:String
+    city:String
+    state:String
+    postalCode:String
+    secondaryContacts : [Contact]
+    secondaryAddresses: [Address]
+}
+
+type Query{
+    getCustomer(id:ID!):Customer
+    getAllCustomers : [Customer]
+}
+
+type Mutation{
+    addCustomer(companyName : String!, primaryAddress:String!, fax:String, primaryContact:String, termsOfPayment:String,shipVia:String,city:String,state:String,postalCode:String, notes:String, secondaryContacts:[ContactInput], secondaryAddresses:[AddressInput]):Boolean
+    updateCustomer(id:ID!,companyName : String, primaryAddress:String, fax:String, primaryContact:String, termsOfPayment:String,shipVia:String,city:String,state:String,postalCode:String, notes:String,secondaryContacts:[ContactInput], secondaryAddresses:[AddressInput]): Customer
+    deleteCustomer(id:ID!):Boolean
+}

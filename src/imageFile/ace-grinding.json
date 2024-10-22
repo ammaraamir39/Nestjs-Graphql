@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ace-grinding-7f026",
+  "private_key_id": "7df6a8cbaae5b760378a885e20c6bb7afdb87d06",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDEejJ8gOLVk0ep\nA6+Wh34jLY0uTVRr02P+1Vvu3cvYBkv3jVh2hNUQ2yTVIY1KIgNW+iEOtun44414\n0+SHKzs7MzZxAaeunZoK7x1WFJGx4dOsiiHILBszWt1WswB0FClqd/U3LU/Hq8BA\nZmR4U6X1lFv+1x1HcUE/2eOKIQ81/RAMPGrF7USa+V4HWUvLyMtjRUXCXxGdRdxI\nFrjW+u6japWkbi1KN9DlfbQIoOkNmGI8zXV+Q0xbG/gj5y9iiN47bCyAZSypEXg+\n4oSYgtTI18vmYcFSWcBqoqnR+KXv8011LrB4Ml0qzAvkNVVnSSiWtusREDVzgYt7\nZtoKZvS3AgMBAAECggEAQ8LrJ5Jh6Qve8pUBWVaIc8RxhQ8JdxiUS561Eqgu9eWS\nDKIUaOe9/g6+YL0uF+usIDKq9QKzpfGA6LOXhOCtkGjEtWu/M5NKPcwi332/k8xR\nLxgCt6Eyjl8fqBebJ+2OLRiLG0kG01PSPcOykeczfQN6SOVSxUFzofxZI9nr/4+Z\nYdGlZaS58u+ZOOXK6Y6u7DwctdBbgbjOnJvhrMPWp9GrjvNFJvQZa67COLNZuhSx\nObEmqAh6CXgK/b+tIvPPU0MsBSvHblq/xWVdGhrAO8U8A5jvOMFB7XQhR2vY5OJP\nIDb2JcNirQOOKypH5/aS+iBoaYlrrcUznqzuZg3rTQKBgQDkBgUrVzudOExg2ZNz\nUET5cNqw4b+83zYznrgjebni06NhHPDW6fkz+XYBZGT5U/rNLr1alCB//QCo8xRc\nI+4r5/T7t/z9Gu2cNUL8K9xRtJu/g98w9MP0QLm5kXqFMbx8NUxhQGKhpY8eTiY9\n71Ri/+QbAZCqK2DKgxxdK3lHXQKBgQDclVgtG+jVfhQybz5gFj2ksD4jY9L4F+cM\n+oEv+HwivtBBlkQ8PP6h/6Oqg/WYk5gwAQoJOJRdeTzV1ULDW63f1AGmYPHQj6Cf\nJAdU60GTL0PNuA00P2JVvwBepcrpARfKCNUGgFry7eUbxCPc8vhSwaND1l7wcHqT\nyohZvLbPIwKBgQCAsx0rzzqojGQfre5ZgY7Ms3Pbri9IbTvsesM30ramXgmzAGC3\nDKxJN53xPzb2uv2t3ZmmjECjvKsosLpnHyiIw400ni4+tXozVqSOLDtYKnZV7BqH\nST9olze8k23xy5a1DGgl4+9HiWh0FGvlPTYGAqQ+0e1S/tTMuJ/DvovfSQKBgDiL\nkC8AGI+h4kuLeNHo4aR2CXfI/yvZ9MC+9p71c9z0TS6C9rr6Z8vfXHU5npueOkUT\n/x6eAmpzycSHBrZNqiTWlBWyhEqShvpEohyCsiyo0RjLNZdPKEYS0GVy2rEgNpjz\n6qff/3CGy1Ry0z6wijesq82YBn5cVw/Lu2hFmBdBAoGAS4dHiu36jBvhBuccwe33\nyf8cMi7dQWfmX5zHb1l+yUbDZ2PuFKi3CwlyuD/dCOnkQBvPvwa/tj7yVLti6NjW\nX3gY8xTOvX9WoT6q8axZgRgB37VHmhia23i0GrBH3grEzyxAobKtxn0OSH6/yK+f\nCsSUNWvGbf4S6oOIe8YMbBo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bucket-admin-storage@ace-grinding-7f026.iam.gserviceaccount.com",
+  "client_id": "112988845962667057875",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bucket-admin-storage%40ace-grinding-7f026.iam.gserviceaccount.com"
+}

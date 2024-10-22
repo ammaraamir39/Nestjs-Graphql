@@ -1,0 +1,27 @@
+type Vendor{
+    id:ID
+    createdAt:String
+    companyName:String
+    primaryAddress :String
+    fax:String
+    primaryContact : String
+    termsOfPayment:String
+    notes:String
+    city:String
+    state:String
+    zipCode:String
+    secondaryContacts : [Contact]
+    secondaryAddresses: [Address]
+}
+
+type Query{
+
+    getVendor(id:ID!):Vendor
+    getAllVendors : [Vendor]
+}
+type Mutation{
+
+    addVendor(companyName : String!, primaryAddress:String!, fax:String, primaryContact:String!, termsOfPayment:String!, notes:String, state:String, city:String, zipCode:String, secondaryContacts:[ContactInput], secondaryAddresses:[AddressInput]):Boolean
+    updateVendor(id:ID!,companyName : String, primaryAddress:String, fax:String, primaryContact:String, termsOfPayment:String, notes:String,state:String, city:String, zipCode:String,secondaryContacts:[ContactInput], secondaryAddresses:[AddressInput]): Vendor
+    deleteVendor(id:ID!):Boolean
+}

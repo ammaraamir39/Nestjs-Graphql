@@ -1,0 +1,55 @@
+enum TypeAorC {
+    A
+    C
+}
+enum TypeLorB{
+    L
+    B
+}
+type QuotationStock{
+    id : ID
+    typeAorC : TypeAorC 
+    typeLorB : TypeLorB
+    quantity : Float
+    grade : String
+    startSize : Float
+    finishSizeHigh : Float
+    finishSizeLow : Float
+    rms : Float
+    feet : Float 
+    inches : Float 
+    tolerance : Float 
+    grossLB : Float 
+    netLB : Float 
+    stockRemoval : Float
+    bars : Float
+    unitPrice: Float
+    priceType : PriceType
+    boxingPrice:Float
+    total:Float
+    notes:String
+
+}
+
+input QuotationStockInput{
+    typeAorC:TypeAorC
+    typeLorB:TypeLorB
+    quantity:Float!
+    grade:String
+    startSize : Float
+    finishSizeHigh:Float!
+    finishSizeLow:Float!
+    rms:Float
+    feet:Float!
+    inches:Float!
+    tolerance:Float
+    grossLB:Float!
+    netLB:Float
+    stockRemoval:Float
+    bars:Float
+    unitPrice:Float!
+    priceType:PriceType!
+    boxingPrice:Float
+    total:Float
+    notes:String
+}

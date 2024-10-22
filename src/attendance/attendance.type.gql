@@ -1,0 +1,24 @@
+type Attendance{
+    id:ID
+    notes : String
+    employee : Employee
+    createdAt: String
+    updatedAt : String
+    attendanceStatus : AttendanceStatus
+}
+
+enum AttendanceStatus{
+    CHECK_IN
+    CHECK_OUT
+}
+
+type Query{
+    getAttendanceById(id:ID!) : Attendance
+    getAllAttendance : [Attendance]
+    getAllEmployeeAttendanceOfPastHalfMonth : [Attendance]
+}
+
+type Mutation{
+    addAttendance(employeeId : ID!, attendanceStatus : AttendanceStatus! , notes :String )  : Boolean
+    deleteAttendance(id : ID !) : Boolean
+}

@@ -1,0 +1,13 @@
+type Address {
+  id: ID
+  createdAt: String
+  name: String
+  address: String
+}
+
+
+input AddressInput{
+    id:ID
+    name:String
+    address:String
+}

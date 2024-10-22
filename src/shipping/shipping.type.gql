@@ -1,0 +1,45 @@
+type Shipping{
+    id:ID
+    createdAt:String
+    orderAdmin : OrderAdmin
+    companyName : String
+    shippingCharges : Float
+    shipVia : String
+    quantity : Float 
+    containerOptions : String 
+    notes : String
+    hasCustomerBilled:Boolean
+}
+
+type Query{
+    getShippingById(id:ID!) : Shipping
+    getAllShipping : [Shipping]
+}
+
+type Mutation {
+
+    addShipping(
+    orderId : ID!
+    shippingCharges : Float!
+    shipVia : String
+    quantity : Float
+    containerOptions : String
+    notes : String
+    hasCustomerBilled:Boolean
+
+    ) : Boolean
+
+    updateShipping(
+        id:ID!
+        orderId: ID!
+        shippingCharges : Float
+        shipVia : String
+        quantity : Float 
+        containerOptions : String
+        notes : String
+        hasCustomerBilled:Boolean
+    ) : Shipping
+
+     
+    deleteShippingById(id:ID!) : Boolean
+}

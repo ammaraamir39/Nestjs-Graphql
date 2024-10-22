@@ -1,0 +1,21 @@
+type PurchaseOrder {
+    id: ID
+    createdAt: String
+    updatedAt : String
+    contactName : String
+    products : [PurchaseOrderProducts]
+    vendor : Vendor
+}
+
+type Query {
+    getPurchaseOrderById(id:ID!) : PurchaseOrder
+    getAllPurchaseOrders : [PurchaseOrder]
+    getPurchaseOrderByVendor(id:ID!) : [PurchaseOrder]
+
+}
+
+type Mutation {
+    addPurchaseOrder(contactName:String , products : [PurchaseOrderProductsInput] ,  vendor : ID) : Boolean
+    deletePurchaseOrder(id:ID!) : Boolean
+    updatePurchaseOrder(id:ID!,contactName:String , products : [PurchaseOrderProductsInput] ,  vendorId : ID):Boolean
+}

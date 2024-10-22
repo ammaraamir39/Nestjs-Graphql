@@ -1,0 +1,21 @@
+type AnalyticsCount {
+    customerCount: Int
+    quotationCount: Int
+    employeeCount: Int
+    orderCount: Int
+    vendorCount:Int
+}
+type RevenueByDate {
+    date:String
+    amount:Int
+}
+
+type RevenueOrderQuotation{
+    orderRevenue:[RevenueByDate]
+    quotationRevenue:[RevenueByDate]
+}
+
+type Query{
+    getCount:AnalyticsCount
+    getLastMonthQuotationAndOrderRevenue:RevenueOrderQuotation
+}

@@ -1,0 +1,45 @@
+type InvoiceAR{
+    id:ID
+    createdAt: String
+    orderAdmin : OrderAdmin
+    shippingCharges : Float
+    periodNo : String
+    salesTaxAmount : Float 
+    invoiceTotal : Float
+    status : String 
+    ignoreMinimumChanges : Boolean
+
+}
+
+type Query{
+    getInvoiceARById(id:ID!) : InvoiceAR
+    getAllInvoiceARs : [InvoiceAR]
+    getFiveInvoicesAR : [InvoiceAR]
+}
+
+type Mutation { 
+    addInvoiceAR(
+        orderId : ID!
+        shippingCharges : Float
+        status : String
+        invoiceTotal : Float
+        salesTaxAmount : Float
+        ignoreMinimumChanges : Boolean
+        periodNo : String
+    ) : Boolean
+
+
+    updateInvoiceAR(
+        id:ID!
+        orderId : ID
+        shippingCharges : Float
+        status : String
+        invoiceTotal : Float
+        salesTaxAmount : Float
+        ignoreMinimumChanges : Boolean 
+        periodNo : String
+    ) : InvoiceAR
+
+     
+    deleteInvoiceARById(id:ID!) : Boolean
+}

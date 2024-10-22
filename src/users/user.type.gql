@@ -1,0 +1,29 @@
+enum UserRole{
+    ADMIN
+    SHOP
+}
+
+type User{
+    id: ID
+    name: String
+    email : String
+    isActive : Boolean
+    role : UserRole
+    createdAt:String
+    firebaseUid:String
+}
+
+type Query{
+    getUser(id:ID!) : User
+    getAllUsers : [User]
+    getUserByEmail(email:String!):User
+
+}
+
+type Mutation{
+    addUser(name:String!, email:String!,role:String,firebaseUid:String) : Boolean
+    updateUser(id:ID! ,name:String, email:String,role:String,isActive:Boolean) : User
+    deleteUser(id:ID!) : Boolean
+}
+
+

@@ -1,0 +1,16 @@
+type PurchaseOrderProducts {
+    id:ID
+    createdAt : String
+    UpdatedAt: String
+    quantity : Float
+    unitOfMeasure: String
+    description: String
+    unitPrice: Float
+}
+
+input PurchaseOrderProductsInput {
+    quantity : Float
+    unitOfMeasure: String
+    description: String
+    unitPrice: Float
+}

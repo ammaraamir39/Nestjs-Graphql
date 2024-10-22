@@ -1,0 +1,9 @@
+type TimeCheck{
+    id: ID 
+    orderAdmin : OrderAdmin
+    status : String  
+}
+
+input TimeCheckInput {
+    status : String! 
+}

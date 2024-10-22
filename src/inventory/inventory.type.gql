@@ -1,0 +1,64 @@
+type Inventory{
+    id: ID
+    vendor: Vendor
+    createdAt:String
+    product : Product
+    purchaseOrderNo : String 
+    size : Float
+    feet : Float 
+    inches : Float   
+    quantity : [Quantity]
+    heatNo : String
+    notes : String 
+    weight : Float
+    totalBars : Float
+    country : String
+    grade:String
+}
+
+type Query {
+    getInventoryById(id:ID!) : Inventory
+    getAllInventory : [Inventory]
+    getInventoryByGrade(grade:String!,size:Float,heatNo:String):[Inventory]
+
+}
+
+type Mutation{
+
+    addInventory(
+        purchaseOrderNo : String
+        vendorId : ID!
+        productName : String!
+        grade:String
+        size : Float!
+        feet : Float!
+        inches :Float!
+        heatNo : String
+        notes : String
+        quantity : [QuantityInput]!
+        weight : Float
+        totalBars : Float
+        country : String 
+        ) : Boolean
+
+    
+    updateInventory(
+        id:ID!
+        purchaseOrderNo : String
+        vendorId : ID!
+        productName : String!
+        grade:String
+        size : Float!
+        feet : Float!
+        inches :Float!
+        heatNo : String
+        notes : String
+        quantity : [QuantityInput]!
+        weight : Float
+        totalBars : Float
+        country : String
+        ) : Inventory
+    
+      deleteInventory(id:ID!) :Boolean
+}
+

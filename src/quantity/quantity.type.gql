@@ -1,0 +1,11 @@
+type Quantity {
+    quantity : Float
+    createdAt : String
+    updatedAt : String
+    id:ID
+
+}
+
+input QuantityInput{
+    quantity: Float
+}

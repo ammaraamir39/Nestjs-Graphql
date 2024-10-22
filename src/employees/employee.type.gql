@@ -1,0 +1,30 @@
+type Employee{
+    id:ID
+    name:String
+    email:String
+    address:String
+    contact:String
+    socialSecurity:String
+    notes:String
+    isActive:Boolean
+    createdAt:String
+    attendanceStatus : AttendanceStatus
+    attendance : [Attendance]
+}
+
+input EmployeeInput{
+    id : ID
+    name:String
+}
+
+type Query{
+    getEmployee(id:ID!) : Employee
+    getAllEmployee : [Employee]
+    getCurrentDayAttendance(days:String!) : [Employee]
+}
+
+type Mutation{
+    addEmployee(name:String!, email:String, address:String, contact:String, socialSecurity:String, notes:String, isActive:Boolean) : Boolean
+    deleteEmployeeById(id:ID!):Boolean
+    updateEmployee(id:ID!,name:String, email:String, address:String, contact:String, socialSecurity:String, notes:String, isActive:Boolean) : Employee
+}

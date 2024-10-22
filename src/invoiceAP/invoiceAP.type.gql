@@ -1,0 +1,34 @@
+type InvoiceAP{
+    id:ID
+    createdAt:String
+    vendor : Vendor
+    shippingCharges : Float
+    invoiceTotal : Float
+    status : String
+}
+
+type Query{
+    getInvoiceAPById(id:ID!) : InvoiceAP
+    getAllInvoiceAPs : [InvoiceAP]
+}
+
+type Mutation { 
+    addInvoiceAP(
+        vendorId : ID!
+        shippingCharges : Float
+        status : String
+        invoiceTotal : Float
+    ) : Boolean
+
+
+    updateInvoiceAP(
+        id:ID!
+        vendorId : ID
+        shippingCharges : Float
+        status : String
+        invoiceTotal : Float
+    ) : InvoiceAP
+
+     
+    deleteInvoiceAPById(id:ID!) : Boolean
+}

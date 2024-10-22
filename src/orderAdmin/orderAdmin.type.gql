@@ -1,0 +1,65 @@
+type OrderAdmin{
+    id:ID
+    createdAt : String
+    customer : Customer
+    shipToCustomerName:String
+    shipToCustomerAddress:String
+    pONumber : String
+    buyerName : String 
+    shipDate : String 
+    orderAdminChs : [OrderAdminChs]
+    imageFile : [ImageFile]
+    invoiceNo : String
+    employee : [Employee]
+    grandTotal : Float
+    status : String
+    notes : String
+    timeCheck : [TimeCheck]
+    imageUrl:[ImageFile]
+}
+
+
+type Query{
+    getOrderAdminById(id:ID!) :OrderAdmin
+    getAllOrderAdmins : [OrderAdmin]
+    getAllOrdersShop : [OrderAdmin]
+    getFiveOrders : [OrderAdmin]
+}
+
+type Mutation {
+
+    addOrderAdmin(
+        customerId : ID!
+        shipToCustomerName:String
+        shipToCustomerAddress:String
+        pONumber:String
+        buyerName: String
+        orderAdminChs : [OrderAdminChsInput]!
+
+        invoiceNo : String
+        shipDate : String
+        grandTotal : Float!
+        notes : String
+        ) : Boolean
+
+    addTime(orderAdminId : ID!, status : String!) : Boolean
+    updateEmployeeRecord(employeeId : [EmployeeInput]! , orderAdminId : ID!) : Boolean
+    updateOrderAdmin(
+        id:ID!
+        customerId : ID!
+        shipToCustomerName:String
+        shipToCustomerAddress:String
+        pONumber:String
+        buyerName: String
+        orderAdminChs : [OrderAdminChsInput]!,
+        invoiceNo : String
+        shipDate : String
+        grandTotal : Float!
+        notes : String
+    ) : OrderAdmin
+
+
+    deleteOrderAdmin(id:ID!) : Boolean
+}
+
+

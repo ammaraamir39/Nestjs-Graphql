@@ -1,0 +1,36 @@
+type NonConformance{
+    id: ID
+    createdAt:String
+    nonConformanceType : String 
+    nonConformanceCode : String 
+    invoiceTotal : Float 
+    quantity : Float 
+    customerCode : String
+}
+
+type Query{
+    getNCById(id:ID!) : NonConformance
+    getAllNCs : [NonConformance]
+}
+
+type Mutation { 
+    addNC(
+        nonConformanceType : String
+        nonConformanceCode : String
+        invoiceTotal : Float!
+        quantity : Float!
+        customerCode : String
+    ) : Boolean
+
+    updateNC(
+        id: ID!
+        nonConformanceType : String
+        nonConformanceCode : String
+        invoiceTotal : Float
+        quantity : Float
+        customerCode : String
+        
+    ) : NonConformance
+
+    deleteNCById(id:ID!) : Boolean
+}
